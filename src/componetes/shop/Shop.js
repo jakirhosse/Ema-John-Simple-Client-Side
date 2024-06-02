@@ -13,7 +13,7 @@ const Shop = () => {
     const [size, setSize] = useState(10);
 
     useEffect(() => {
-        const url = `http://localhost:5000/products?page=${page}&size=${size}`;
+        const url = `https://ema-john-simple-server-side.vercel.app/products?page=${page}&size=${size}`;
         console.log(page, size);
         fetch(url)
             .then(res => {
@@ -44,7 +44,7 @@ const Shop = () => {
         const ids = Object.keys(storedCart);
         console.log(ids);
 
-        fetch('http://localhost:5000/productsById', {
+        fetch('https://ema-john-simple-server-side.vercel.app/productsById', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
